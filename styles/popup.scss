@@ -1,0 +1,157 @@
+body {
+  width: 500px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  label.error {
+    color: red;
+  }
+
+  h3 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    border-radius: 5px;
+    padding: 20px;
+
+    #form_popup {
+      .field_name {
+        margin-bottom: 10px;
+
+        .label_text {
+          margin: 10px 0;
+          font-weight: bold;
+        }
+
+        .input_field {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 8px;
+          resize: vertical;
+        }
+      }
+
+      .field_email {
+        margin-bottom: 10px;
+
+        .label_text {
+          margin-top: 10px 0;
+          font-weight: bold;
+        }
+
+        .input_field {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 8px;
+          resize: vertical;
+        }
+      }
+
+      .label_text {
+        margin: 10px 0;
+        font-weight: bold;
+      }
+
+      #radio {
+        margin-top: 6px;
+        display: flex;
+        margin-bottom: 16px;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .item_radio {
+          display: flex;
+        }
+      }
+
+      #date_time {
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 25px;
+
+        .start_date {
+          width: 50%;
+
+          input {
+            margin: 10px 0;
+            width: 90%;
+          }
+
+          label {
+            text-align: start;
+            font-weight: bold;
+          }
+        }
+
+        .end_date {
+          width: 50%;
+          flex-direction: column;
+
+          input {
+            margin: 10px 0;
+            width: 90%;
+
+          }
+
+          label {
+            font-weight: bold;
+          }
+        }
+      }
+
+      .field_leader {
+        flex-direction: column;
+
+        span {
+          font-weight: bold;
+        }
+
+        select {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          background-color: white;
+          resize: vertical;
+        }
+      }
+
+      .reason {
+        label {
+          font-weight: bold;
+        }
+
+        textarea {
+          margin-top: 6px;
+          height: 50px;
+          width: 100%;
+        }
+      }
+
+      .button {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+
+        input {
+          padding: 6px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}

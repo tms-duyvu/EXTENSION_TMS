@@ -5,42 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/styles/popup.css">
 </head>
+
 <body>
-  <h3>Abset Form</h3>
+  <div class="img">
+    <img src="../styles/color_logo_with_background.png" alt="">
+  </div>
   <div class="container">
-    <form id="my_form" >
-      <label for="fname">Full Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      <label for="lname">Day Off</label>
-      <input type="text" id="lname" name="lastname" placeholder="Day">
-      <div id="radio">
-          <div>
-              <input type="radio" id="sang" name="session" value="morning">
-              <label for="male">Morning</label><br>
-          </div>
-          <div>
-              <input type="radio" id="chieu" name="session" value="afternoon">
-              <label for="female">Afternoon</label><br>
-          </div>
-          <div>
-              <input type="radio" id=" fullday " name="session" value="full_day ">
-              <label for="other ">Full Day</label>
-          </div>
+    <form id="form_popup">
+      <div class="field_name">
+        <label class="label_text">Full Name:</label>
+        <input class="input_field" type="text" id="fname" name="firstname" placeholder="Your name..">
       </div>
-      <br>
-      <label for="manager ">Manager</label>
-      <select id="maneger" name="maneger">
-        <option value="MinhTan" selected>A Minh</option>
-        <option value="longvv">Long Van</option>
-        <option value="le">Le</option>
-      </select>
-      <label for="subject">Subject</label>
-      <textarea id="subject " name="subject" placeholder="Write something.." style="height:200px "></textarea>
-      <input type="submit" value="Submit" id="button_action">
+      <div class="field_email">
+        <label class="label_text">Email:</label>
+        <input class="input_field" type="text" id="email" name="email" placeholder="Your email..">
+      </div>
+      <label class="label_text">Category:</label>
+      <div id="radio">
+        <div class="item_radio">
+          <input type="radio" id="morning" name="category" value="morning" checked="checked">
+          <label for="male">Morning</label><br>
+        </div>
+        <div class="item_radio">
+          <input type="radio" id="afternoon" name="category" value="afternoon">
+          <label for="female">Afternoon</label><br>
+        </div>
+        <div class="item_radio">
+          <input type="radio" id="fullday" name="category" value="full_day">
+          <label for="other ">Full day</label>
+        </div>
+        <div class="item_radio">
+          <input type="radio" id="several_days" name="category" value="several_days">
+          <label for="other ">Other Option</label>
+        </div>
+      </div>
+      <div id="date_time">
+        <div class="start_date">
+          <label for="other ">Start day</label>
+          <input type="datetime-local" id="start_date" name="calenda_start_date">
+        </div>
+        <div class="end_date">
+          <div id='date' >
+            <label for="other ">End day</label>
+            <input type="datetime-local" id="end_date" name="calenda_end_date">
+          </div>
+        </div>
+      </div>
+      <div class="field_leader">
+        <span for="manager ">Manager</span>
+        <select id="manager" name="manager">
+        </select>
+      </div>
+      <div class="reason">
+        <label>Reason</label>
+        <textarea id="reason" name="subject" placeholder="Write something.."></textarea>
+      </div>
+      <div class="button">
+        <input type="submit" value="Submit" id="submit" />
+      </div>
     </form>
   </div>
-  <script src="https://apis.google.com/js/client.js?onload=onGAPILoad"></script>
-  <script type="module" src="./popup.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=onGAPILoad"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"
+      type="text/javascript"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type = "module" src="validate.js"></script>
+    <script type="module" src="./popup.js"></script>
 </body>
 
 </html>
